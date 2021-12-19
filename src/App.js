@@ -1,5 +1,5 @@
-import Profile from './components/Profile';
-import user from './user.json';
+import Profile from './components/Profile/Profile';
+import user from './components/Profile/user.json';
 
 export default function App() {
   return (
@@ -10,6 +10,9 @@ export default function App() {
         location={user.location}
         avatar={user.avatar}
         stats={user.stats}
+        followers={user.stats.followers}
+        views={user.stats.views}
+        likes={user.stats.likes}
       />
     </div>
   );
