@@ -4,26 +4,24 @@ import RandomColor from './RandomColor';
 
 export default function Statistics({ title, stats }) {
   return (
-    <>
-      <section className={s.statistics}>
-        {title && <h2 className={s.title}>Upload stats</h2>}
+    <section className={s.statistics}>
+      {title && <h2 className={s.title}>Upload stats</h2>}
 
-        <ul className={s.statList}>
-          {stats.map(stat => (
-            <li
-              key={stat.id}
-              className={s.item}
-              style={{
-                backgroundColor: `rgb(${RandomColor()}, ${RandomColor()}, ${RandomColor()})`,
-              }}
-            >
-              <span className={s.label}>{stat.label}</span>
-              <span className={s.percentage}>{stat.percentage}%</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </>
+      <ul className={s.statList}>
+        {stats.map(stat => (
+          <li
+            key={stat.id}
+            className={s.item}
+            style={{
+              backgroundColor: `rgb(${RandomColor()}, ${RandomColor()}, ${RandomColor()})`,
+            }}
+          >
+            <span className={s.label}>{stat.label}</span>
+            <span className={s.percentage}>{stat.percentage}%</span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
